@@ -19,21 +19,22 @@ function listTitles(shelf) {
   var listShelf = "";
   for (let i = 0; i < shelf.length; i++) {
     listShelf += shelf[i].title + ", ";
-    var spliceShelf = listShelf.slice(0, -2);
+    //Slice to remove the last ,  feels hardcoded to me. I wanted to use join originally but I kept getting the .join() is not a function.
+    var sliceShelf = listShelf.slice(0, -2);
   }
-  return spliceShelf;
+  return sliceShelf;
 }
 
 function searchShelf(shelf, book) {
-  var bookOnShelf = true
+  var isBookOnShelf = true
   for (let i = 0; i < shelf.length; i++) {
     if(shelf[i].title === book) {
-      bookOnShelf = true
+      isBookOnShelf = true
     } else {
-      bookOnShelf = false
+      isBookOnShelf = false
     }
   }
-  return bookOnShelf
+  return isBookOnShelf
 }
 
 
