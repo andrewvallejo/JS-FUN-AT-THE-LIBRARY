@@ -1,7 +1,9 @@
+// Title Creator 
 function createTitle(title) {
   return `The ${title}`
 }
 
+// Character Builder
 function buildMainCharacter(name, age, pronoun, reviews) {
   var character = {
     name: name,
@@ -12,25 +14,29 @@ function buildMainCharacter(name, age, pronoun, reviews) {
   return character
 }
 
+// Review Saver
 function saveReview(review, reviews) {
   if (!reviews.length) {
     reviews.push(review)
   }
   for (let i = 0; i < reviews.length; i++) {
     if (review === reviews[i]) {
-      return reviews
-     } else {
+       return reviews
+    } else {
        reviews.push(review)
        return reviews
-     }
+      }
     }
   }
+
+//Page Count Calculator 
 function calculatePageCount(title) {
   var pageCount = title.length
-  var results = pageCount * 20
-  return  results
+  return pageCount * 20
 }
 
+
+// Book Builder
 function writeBook(bookTitle, bookCharacter, genre) {
   var book = {
     title: bookTitle,
@@ -41,11 +47,11 @@ function writeBook(bookTitle, bookCharacter, genre) {
   return book
 }
 
+
+// Edit Page Count
 function editBook(book) {
   book.pageCount = book.pageCount * .75
-return book.pageCount
- }
- 
+};
 
 module.exports = {
   createTitle,
