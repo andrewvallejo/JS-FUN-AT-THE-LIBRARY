@@ -13,16 +13,16 @@ class Librarian {
     }
   }
   findBook(book) {
-   var shelf = this.library.shelves.fantasy
-   var libBook = shelf[0]
-  //  console.log(libBook)
-  //   // console.log(shelf)
-   for (var i = 0; i < shelf.length; i++) {
-     var LibraryBook = shelf[i]
+    var shelf = this.library.shelves.fantasy;
+    var libBook = shelf[0];
+    //  console.log(libBook)
+    //   // console.log(shelf)
+    for (var i = 0; i < shelf.length; i++) {
+      var LibraryBook = shelf[i];
       // console.log(libraryBook)
-     if (libraryBook === book) {
-      return `Yes, we have ${book}`
-    } 
+      if (libraryBook === book) {
+        return `Yes, we have ${book}`;
+      }
     }
   }
 }
